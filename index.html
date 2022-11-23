@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Next Level Profile</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+ <body>
+     <div class="container">
+       
+     </div>
+     <div class="header">
+       <img src="logo.jpg" alt="">
+     </div>
+        <div class="about">
+            <div class="about-text">
+                 <br>
+                <h2 class="white">Developement it&#39;s not magic , it&#39;s how it works!</h2>
+               <p  class="style">I am Naturally Persevered, Self-Confident, Quietly Curios, Innovative And Constantly Challenging My Skills.<br/><br/> </p> <!--<p>I have proceeded my dream to be a developer as it has been my lifelong ambition. I am a talented Front-End developer. As the saying goes,a journey of Thousand miles begins with a single step.Three years ago i started learning Programming and web developement on the internet and took it as my course of study, Now im in ISET DJERBA to get my license as web devolper. <br/><br/>
+                Two years ago i started working to get some money with my coding skills that&#39;s why i need to upgrade them more than any time ! <br></br> </p> -->
+            </div>
+        </div>
+        <div class="card"> 
+            <div class="lines"></div>
+            <div class="imgBx">
+                <img src="images/ghaith.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="details">
+                    <h2>Hello, I&#39;m  Ferchichi Ghaith  <a href="https://www.facebook.com/profile.php?id=100052321292663" target="_blank" rel="noreferrer"><img src="images/facebook.svg" alt="facebook" ></a> <a href="https://github.com/Ferchichi-Ghaith" target="_blank" rel="noreferrer"><img src="images/github.svg" alt="github" ></a> <br> <span>Front-End Devploer</span></h2>
+                    <div class="data"> 
+                        <h3>1<br><span>Posts</span></h3>
+                        <h3 id="stars">1000<br><span>Stars</span></h3> 
+                        <h3>3K<br><span>following</span></h3>
+                    </div>
+                    <div class="actionBtn"> 
+                        <button type="button" onclick="add();">Give me Star!</button>
+                        
+                        <button> <a className="green" href="mailto:workjob148@gmail.com" target="_blank">Let&#39;s chat ! </a> </button>
+    
+                    </div>
+                </div>
+            </div>
+         </div>
+        
+ </body>
+    <!-- js functions for animate background-->
+   <script src="anime.min.js"></script>
+    <script>
+        const container = document.querySelector('.container')
+        for (var i = 0; i <= 110; i++){
+            const blocks = document.createElement('div');
+            blocks.classList.add('block');
+            container.appendChild(blocks);
+        }
+        function animeBlocks(){
+            anime({
+                targets: '.block',
+                translateX: function(){
+                    return anime.random(-700,700);
+                },
+                translateY: function(){
+                    return anime.random(-500,500);
+                },
+                scale: function(){
+                    return anime.random(1,3);
+                },
+
+                easing: 'linear',
+                duration: 3000,
+                delay: anime.stagger(5),
+                complete: animeBlocks,
+            })
+        }
+        animeBlocks()
+        </script>
+         <!-- function add stars -->
+        <script>
+             function add(){
+                starsNumber = document.getElementById("stars");
+                x = starsNumber.textContent;
+                y = parseInt(x);
+                y = y + 1 ;
+                starsNumber.innerHTML = y +"<br><span>Stars</span>";             
+            }
+        </script>
+ </body>
+
+
+
+
+
+</html>

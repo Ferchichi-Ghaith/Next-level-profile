@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+ /* background */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #4b7bb5, #fff200 , #ff0000);
+   
+}
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.block{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: #ff2222;
+    box-shadow: 10px 10px 30px rgb(56, 56, 56);
+    border-radius: 0.3rem;
+
+}
+/* carde profile */
+.card{
+    display: flex;
+    position: relative;
+    left: 70px;
+    width: 400px;
+    height: 250px;
+    background:#333;
+    transition: 0.5s;
+    
+}
+.card:hover {
+    height: 450px;
+}
+.card .lines {
+    position: absolute;
+    inset: 0;
+    background:rgb(0, 0, 0);
+    overflow: hidden;
+}
+.card .lines::before {
+    content: '';
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 650px;
+    height: 170px;
+    background: linear-gradient(transparent, #00eeff,  #00eeff ,#00eeff ,#00eeff , transparent);
+    animation: animate 4s linear infinite;
+
+}
+@keyframes animate {
+    0%
+    {
+        transform: translate(-50%,-50%) rotate(0deg);
+
+    }
+    100%
+    {
+        transform: translate(-50%,-50%) rotate(360deg);
+
+    }
+    
+}
+.card .lines::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+  background-image: linear-gradient(to right, #09266c,  #23184d); 
+}
+.card .imgBx {
+    position: absolute;
+    top:-50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 170px;
+    background: rgb(234, 234, 234);
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;  
+}
+.card:hover .imgBx {
+    width: 200px;
+    height: 200px;
+}
+.card .imgBx::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(transparent, #ffe100, #ff1900 , transparent);
+    animation: animate2 8s linear infinite;
+}
+
+@keyframes animate2 {
+    0%
+    {
+        transform: translate(-50%,-50%) rotate(360deg);
+
+    }
+    100%
+    {
+        transform: translate(-50%,-50%) rotate(0deg);
+
+    }
+    
+}
+.card .imgBx::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+}
+.card .imgBx img {
+    position: absolute;
+    top:5px;
+    left:5px;
+    z-index: 1;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+   
+}
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.card .content .details {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(145px);
+
+}
+.card:hover .content .details {
+    transform: translateY(0px);
+}
+.card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: rgb(221, 245, 245);
+    line-height: 1.2em;
+}
+.card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    color: rgb(254, 243, 145);
+}
+.card .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+}
+.card .content .details .data h3 {
+    font-size: 1em;
+    color: rgb(255, 128, 0);
+    line-height: 1.2em;
+    font-weight: 600;
+
+}
+.card .content .details .data h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+    color: rgb(120, 132, 131);
+}
+.card .content .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+}
+.card .content .details .actionBtn button {
+    padding: 7px 20px;
+    border-radius: 5px  ;
+    font-size: 1em;
+    font-weight: 500;
+    background: #ffe25f;
+    color: #000;
+    cursor: pointer;
+   
+
+}
+.card .content .details .actionBtn button a {
+    text-decoration: none;
+
+}
+.card .content .details .actionBtn button:nth-child(2) {
+    background: rgb(118, 255, 72);
+}
+
+
+
+/* about */
+.about {
+    position: relative;
+    width: 700px;
+    height: 300px;
+    color: rgb(0, 0, 0);
+    font-family: 'New Century Schoolbook';
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.about .white {
+    color: rgb(255, 255, 255);
+}
+.style  {
+    font-family: 'New Century Schoolbook';
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #212020;
+    opacity: 0.9;
+}
+
+/* header*/
+.header{
+    position: absolute;
+    top: 5%;
+    left: 7%;
+  
+
+}
+.header img {
+   
+    border-style: solid;
+    border: 1px;
+    border-radius: 2% 25%;
+}
